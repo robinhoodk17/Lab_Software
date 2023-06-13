@@ -1,0 +1,5 @@
+library(readxl)
+x=scan("clipboard",what="string")
+data = gsub("\\\\", "/", x)
+df=read_excel(data)
+assign("dataframe", df, envir = .GlobalEnv)

@@ -1,0 +1,12 @@
+run("Set Measurements...", "min redirect=None decimal=3");
+run("Duplicate...", "duplicate");
+rename("workfile");
+run("Clear Outside");
+roiManager("Delete");
+title = "workfile";
+run("Split Channels");
+selectWindow("C2-" + title);
+run("Gaussian Blur...", "sigma=2");
+selectWindow("C1-" + title);
+run("Gaussian Blur...", "sigma=2");
+run("Threshold...");

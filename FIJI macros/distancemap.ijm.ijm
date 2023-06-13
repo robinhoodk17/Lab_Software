@@ -1,0 +1,10 @@
+roiManager("Combine");
+roiManager("Add");
+roiManager("Select", roiManager("count")-1);
+run("Create Mask");
+run("Invert");
+run("Distance Map");
+roiManager("Select", roiManager("count")-1);
+run("Make Inverse");
+run("Measure");
+run("Histogram");
