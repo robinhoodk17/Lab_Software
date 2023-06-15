@@ -20,4 +20,4 @@ close();
 setThreshold(1, 255);
 roiManager("Select", roiManager("count")-1);
 roiManager("measure");
-roiManager("reset");
+roiManager("reset")
